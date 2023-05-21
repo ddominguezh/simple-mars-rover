@@ -10,4 +10,9 @@ public class MoveTest {
     public void create_left_move(){
         assertEquals(Move.LEFT, Move.from("L"));
     }
+
+    @Test
+    public void create_right_move(){
+        assertEquals(Move.RIGHT, Move.from("R"));
+    }
 }
