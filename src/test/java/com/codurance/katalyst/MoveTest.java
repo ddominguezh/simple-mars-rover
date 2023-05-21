@@ -15,4 +15,9 @@ public class MoveTest {
     public void create_right_move(){
         assertEquals(Move.RIGHT, Move.from("R"));
     }
+
+    @Test
+    public void create_null_move(){
+        assertEquals(Move.NULL, Move.from("D"));
+    }
 }
