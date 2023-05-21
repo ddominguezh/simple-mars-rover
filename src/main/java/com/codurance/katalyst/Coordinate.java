@@ -14,7 +14,16 @@ public class Coordinate {
         return new Coordinate(x, y);
     }
     public Coordinate move(Direction direction){
-        return null;
+        if(Direction.NORTH.equals(direction)){
+            return new Coordinate(x + 1, y);
+        }
+        if(Direction.EAST.equals(direction)){
+            return new Coordinate(x, y - 1);
+        }
+        if(Direction.SOUTH.equals(direction)){
+            return new Coordinate(x - 1, y);
+        }
+        return new Coordinate(x, y + 1);
     }
     @Override
     public int hashCode() {
