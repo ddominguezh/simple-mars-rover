@@ -27,6 +27,15 @@ public enum Direction {
     }
 
     private Direction moveRight(){
-        return Direction.WEST;
+        if(Direction.NORTH.equals(this)){
+            return Direction.WEST;
+        }
+        if(Direction.WEST.equals(this)){
+            return Direction.SOUTH;
+        }
+        if(Direction.SOUTH.equals(this)){
+            return Direction.EAST;
+        }
+        return Direction.NORTH;
     }
 }

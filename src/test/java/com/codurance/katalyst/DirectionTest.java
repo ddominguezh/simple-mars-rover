@@ -30,4 +30,19 @@ public class DirectionTest {
     public void move_from_north_direction_to_the_right(){
         assertEquals(Direction.WEST, Direction.NORTH.move(Move.RIGHT));
     }
+
+    @Test
+    public void move_from_west_direction_to_the_right(){
+        assertEquals(Direction.SOUTH, Direction.WEST.move(Move.RIGHT));
+    }
+
+    @Test
+    public void move_from_south_direction_to_the_right(){
+        assertEquals(Direction.EAST, Direction.SOUTH.move(Move.RIGHT));
+    }
+
+    @Test
+    public void move_from_east_direction_to_the_right(){
+        assertEquals(Direction.NORTH, Direction.EAST.move(Move.RIGHT));
+    }
 }
