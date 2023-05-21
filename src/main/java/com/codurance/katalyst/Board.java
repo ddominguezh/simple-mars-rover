@@ -10,7 +10,23 @@ public class Board {
         return new Board(limit);
     }
     public boolean outOfLimit(Coordinate coordinate) {
-        throw new UnsupportedOperationException();
+        return coordinate.x() >= limit || coordinate.x() < 0 
+            || coordinate.y() >= limit || coordinate.y() < 0;
+    }
+    public Coordinate opposite(Coordinate coordinate) {
+        if(coordinate.x() >= limit){
+            return Coordinate.create(0, coordinate.y());
+        }
+        if(coordinate.x() < 0){
+            return Coordinate.create(limit - 1, coordinate.y());
+        }
+        if(coordinate.y() >= limit){
+            return Coordinate.create(coordinate.x(), 0);
+        }
+        if(coordinate.y() < 0){
+            return Coordinate.create(coordinate.x(), limit - 1);
+        }
+        return coordinate;
     }
     
 }

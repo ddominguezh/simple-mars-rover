@@ -9,8 +9,6 @@ public class Coordinate {
         this.y = y;
     }
     public static Coordinate create(int x, int y){
-        assert(x >= 0);
-        assert(y >= 0);
         return new Coordinate(x, y);
     }
     public Coordinate move(Direction direction){
@@ -24,6 +22,12 @@ public class Coordinate {
             return new Coordinate(x - 1, y);
         }
         return new Coordinate(x, y + 1);
+    }
+    public int x() {
+        return this.x;
+    }
+    public int y() {
+        return this.y;
     }
     @Override
     public int hashCode() {
