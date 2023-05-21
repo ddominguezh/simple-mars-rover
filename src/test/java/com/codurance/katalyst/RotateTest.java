@@ -4,20 +4,20 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
-public class MoveTest {
+public class RotateTest {
     
     @Test
     public void create_left_move(){
-        assertEquals(Move.LEFT, Move.from("L"));
+        assertEquals(Rotate.LEFT, Rotate.from("L"));
     }
 
     @Test
     public void create_right_move(){
-        assertEquals(Move.RIGHT, Move.from("R"));
+        assertEquals(Rotate.RIGHT, Rotate.from("R"));
     }
 
     @Test
     public void create_null_move(){
-        assertEquals(Move.NULL, Move.from("D"));
+        assertEquals(Rotate.NULL, Rotate.from("D"));
     }
 }

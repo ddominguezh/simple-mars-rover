@@ -7,42 +7,42 @@ import org.junit.jupiter.api.Test;
 public class DirectionTest {
     
     @Test
-    public void move_from_north_direction_to_the_left(){
-        assertEquals(Direction.EAST, Direction.NORTH.move(Move.LEFT));
+    public void rotate_from_north_direction_to_the_left(){
+        assertEquals(Direction.EAST, Direction.NORTH.rotate(Rotate.LEFT));
     }
 
     @Test
-    public void move_from_east_direction_to_the_left(){
-        assertEquals(Direction.SOUTH, Direction.EAST.move(Move.LEFT));
+    public void rotate_from_east_direction_to_the_left(){
+        assertEquals(Direction.SOUTH, Direction.EAST.rotate(Rotate.LEFT));
     }
 
     @Test
-    public void move_from_south_direction_to_the_left(){
-        assertEquals(Direction.WEST, Direction.SOUTH.move(Move.LEFT));
+    public void rotate_from_south_direction_to_the_left(){
+        assertEquals(Direction.WEST, Direction.SOUTH.rotate(Rotate.LEFT));
     }
 
     @Test
-    public void move_from_west_direction_to_the_left(){
-        assertEquals(Direction.NORTH, Direction.WEST.move(Move.LEFT));
+    public void rotate_from_west_direction_to_the_left(){
+        assertEquals(Direction.NORTH, Direction.WEST.rotate(Rotate.LEFT));
     }
 
     @Test
-    public void move_from_north_direction_to_the_right(){
-        assertEquals(Direction.WEST, Direction.NORTH.move(Move.RIGHT));
+    public void rotate_from_north_direction_to_the_right(){
+        assertEquals(Direction.WEST, Direction.NORTH.rotate(Rotate.RIGHT));
     }
 
     @Test
-    public void move_from_west_direction_to_the_right(){
-        assertEquals(Direction.SOUTH, Direction.WEST.move(Move.RIGHT));
+    public void rotate_from_west_direction_to_the_right(){
+        assertEquals(Direction.SOUTH, Direction.WEST.rotate(Rotate.RIGHT));
     }
 
     @Test
-    public void move_from_south_direction_to_the_right(){
-        assertEquals(Direction.EAST, Direction.SOUTH.move(Move.RIGHT));
+    public void rotate_from_south_direction_to_the_right(){
+        assertEquals(Direction.EAST, Direction.SOUTH.rotate(Rotate.RIGHT));
     }
 
     @Test
-    public void move_from_east_direction_to_the_right(){
-        assertEquals(Direction.NORTH, Direction.EAST.move(Move.RIGHT));
+    public void rotate_from_east_direction_to_the_right(){
+        assertEquals(Direction.NORTH, Direction.EAST.rotate(Rotate.RIGHT));
     }
 }
