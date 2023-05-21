@@ -2,26 +2,26 @@ package com.codurance.katalyst;
 
 public class Coordinate {
     
-    private int x;
     private int y;
-    protected Coordinate(int x, int y){
-        this.x = x;
+    private int x;
+    protected Coordinate(int y, int x){
         this.y = y;
+        this.x = x;
     }
-    public static Coordinate create(int x, int y){
-        return new Coordinate(x, y);
+    public static Coordinate create(int y, int x){
+        return new Coordinate(y, x);
     }
     public Coordinate move(Direction direction){
         if(Direction.NORTH.equals(direction)){
-            return new Coordinate(x + 1, y);
+            return new Coordinate(y + 1, x);
         }
         if(Direction.EAST.equals(direction)){
-            return new Coordinate(x, y - 1);
+            return new Coordinate(y, x - 1);
         }
         if(Direction.SOUTH.equals(direction)){
-            return new Coordinate(x - 1, y);
+            return new Coordinate(y - 1, x);
         }
-        return new Coordinate(x, y + 1);
+        return new Coordinate(y, x + 1);
     }
     public int x() {
         return this.x;

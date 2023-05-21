@@ -15,16 +15,16 @@ public class Board {
     }
     public Coordinate opposite(Coordinate coordinate) {
         if(coordinate.x() >= limit){
-            return Coordinate.create(0, coordinate.y());
+            return Coordinate.create(coordinate.y(), 0);
         }
         if(coordinate.x() < 0){
-            return Coordinate.create(limit - 1, coordinate.y());
+            return Coordinate.create(coordinate.y(), limit - 1);
         }
         if(coordinate.y() >= limit){
-            return Coordinate.create(coordinate.x(), 0);
+            return Coordinate.create(0, coordinate.x());
         }
         if(coordinate.y() < 0){
-            return Coordinate.create(coordinate.x(), limit - 1);
+            return Coordinate.create(limit - 1, coordinate.x());
         }
         return coordinate;
     }
