@@ -38,4 +38,9 @@ public enum Direction {
         }
         return Direction.NORTH;
     }
+
+    @Override
+    public String toString(){
+        return this.name().substring(0, 1);
+    }
 }

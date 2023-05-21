@@ -45,4 +45,24 @@ public class DirectionTest {
     public void rotate_from_east_direction_to_the_right(){
         assertEquals(Direction.NORTH, Direction.EAST.rotate(Rotate.RIGHT));
     }
+
+    @Test
+    public void direction_north_to_string(){
+        assertEquals("N", Direction.NORTH.toString());
+    }
+
+    @Test
+    public void direction_east_to_string(){
+        assertEquals("E", Direction.EAST.toString());
+    }
+
+    @Test
+    public void direction_south_to_string(){
+        assertEquals("S", Direction.SOUTH.toString());
+    }
+
+    @Test
+    public void direction_west_to_string(){
+        assertEquals("W", Direction.WEST.toString());
+    }
 }
