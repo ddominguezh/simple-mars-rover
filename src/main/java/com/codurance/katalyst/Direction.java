@@ -5,7 +5,15 @@ public enum Direction {
     EAST,
     SOUTH,
     WEST;
+
     public Direction move(Move value) {
+        if(Move.LEFT.equals(value)){
+            return moveLeft();
+        }
+        return moveRight();
+    }
+
+    private Direction moveLeft(){
         if(Direction.NORTH.equals(this)){
             return Direction.EAST;
         }
@@ -16,5 +24,9 @@ public enum Direction {
             return Direction.WEST;
         }
         return Direction.NORTH;
+    }
+
+    private Direction moveRight(){
+        return Direction.WEST;
     }
 }
